@@ -1,0 +1,241 @@
+@media screen and (max-width: 1024px) {
+    .sidebar-nav {
+        width: 70px !important;
+        min-width: 70px !important;
+        padding: 10px 4px;
+        background-color: white;
+    }
+
+    .sidebar {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar .caption {
+        display: none !important;
+    }
+
+    .sidebar .icon-coins {
+        width: 40px;
+        height: 30px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .sidebar-nav .payment>span:first-child {
+        display: none;
+    }
+
+    .sidebar-nav .pages,
+    .sidebar-nav .payment {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-nav .pages span,
+    .sidebar-nav .payment span {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        margin: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 14px;
+        font-size: 0;
+        cursor: pointer;
+    }
+
+    .sidebar-nav .pages span i,
+    .sidebar-nav .payment span i {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-nav .pages .home {
+        background: #eff6ff;
+    }
+
+    .sidebar-nav .pages span:hover,
+    .sidebar-nav .payment span:hover {
+        background: #f3f4f6;
+        transform: translateY(-3px);
+        transition: 0.3s;
+    }
+
+    .sidebar-nav .payment span i {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dashboard .content-mudabbir {
+        padding-inline: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sidebar-nav,
+    .top-navbar .nav-left .nav-img .caption {
+        display: none !important;
+    }
+
+    .top-navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .top-navbar .nav-right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .top-navbar .nav-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-navbar .nav-left .caption {
+        display: none;
+    }
+
+    .top-navbar .nav-left .nav-img {
+        order: 2;
+    }
+
+    .top-navbar .nav-left .bell {
+        order: 1;
+    }
+
+    .top-navbar .nav-left .search {
+        order: 1;
+    }
+
+    .top-navbar .online {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "current-balance"
+            "income"
+            "expenses"
+            "modern-activities"
+            "recent-transactions"
+            "monthly-invoices"
+            "budget-overview"
+            "income-vs-expenses"
+            "account-summary"
+            "pyment-methods";
+    }
+
+    .grid-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .modern-activities .content {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .monthly-invoices .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .monthly-invoices .invoice-card {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .monthly-invoices .titl .span-1 {
+        font-size: 40px;
+    }
+
+    .monthly-invoices .titl .span-2 {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .monthly-invoices .invoice-card .invoice-icon {
+        margin-bottom: 10px;
+    }
+
+    .monthly-invoices .invoice-card .moneyy {
+        font-size: 18px;
+        margin: 6px 0;
+    }
+
+    .monthly-invoices .invoice-card .time {
+        font-size: 12px;
+    }
+
+    .account-summary .account-card {
+        width: 100%;
+    }
+
+    .pyment-methods .payment-card {
+        width: 100%;
+    }
+
+    .recent-transactions {
+        overflow-x: auto;
+    }
+
+    .recent-transactions table {
+        min-width: 700px;
+    }
+
+    .grid-card.current-balance,
+    .grid-card.income,
+    .grid-card.expenses {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .current-balance .money,
+    .income .money,
+    .expenses .money {
+        width: 100%;
+        font-size: 36px;
+    }
+    
+    .current-balance .icon,
+    .income .icon,
+    .expenses .icon {
+        width: 100%;
+        text-align: right;
+    }
+
+}

@@ -1,0 +1,1102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "IBM Plex Sans Arabic";
+    src: url("../fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #F9FAFB;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    direction: rtl;
+}
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard .content-mudabbir{
+    flex: 1;
+    padding-inline: 40px;
+}
+
+h1,
+.sidebar .caption span {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.top-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #E1E2E2;
+    border-radius: 10px;
+    padding-block: 20px;
+    padding-inline: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    background-color: #F9FAFB;
+}
+
+.top-navbar .nav-right,
+.top-navbar .nav-left,
+.sidebar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-navbar .nav-right,
+.sidebar {
+    flex-wrap: wrap;
+}
+
+.top-navbar .nav-left .nav-img {
+    padding: 5px 10px;
+    border-radius: 15px;
+    gap: 10px;
+    border: 2px solid #E1E2E2;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-navbar .nav-left img {
+    width: 40px;
+    border-radius: 10px;
+}
+
+.top-navbar .nav-left .nav-img .caption span {
+    color: oklch(0.551 0.027 264.364);
+    font-size: 12px;
+    font-weight: 600;
+}
+.top-navbar .nav-left .nav-img .caption p {
+    color: oklch(0.21 0.034 264.665);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top-navbar .nav-left .icon {
+    padding: 10px;
+    border: 1px solid #c8c9d0;
+    max-height: 45px;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: oklch(0.551 0.027 264.364);
+}
+.top-navbar .nav-left .icon:hover,
+.top-navbar .nav-left .nav-img:hover {
+    background-color: #e0e1e7;
+}
+
+.top-navbar .nav-left .bell {
+    position: relative;
+}
+.top-navbar .nav-left .bell span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 15px;
+    height: 17px;
+    text-align: center;
+}
+
+.top-navbar .nav-right .icon-coins,
+.sidebar .icon-coins {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3C3DE2;
+    border-radius: 10px;
+    background-color: #3C3DE2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right .caption,
+.sidebar .caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.top-navbar .nav-right .caption p,
+.sidebar .caption p {
+    font-size: 14px;
+    font-weight: 600;
+    color: oklch(0.446 0.03 256.802);
+}
+
+.top-navbar .nav-right .online {
+    background-color: #F0FDF4;
+    color: #02662c;
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #cce5dd;
+    border-radius: 5px;
+}
+
+.top-navbar .nav-right .online .fa-circle {
+    font-size: 8px;
+}
+
+.sidebar-nav {
+    width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.sidebar-nav .pages span,
+.sidebar-nav .payment span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 10px;
+    width: 100%;
+    padding-inline: 10px;
+    margin-top: 30px;
+}
+
+.sidebar-nav .pages .fa-solid {
+    color: oklch(0.446 0.03 256.802);
+}
+
+.sidebar-nav .pages .home,
+.sidebar-nav .pages .fa-house {
+    color: blue;
+    border-radius: 10px;
+}
+
+.sidebar-nav .pages .home {
+    background-color: #EFF6FF;
+}
+
+.sidebar-nav .pages span i,
+.sidebar-nav .payment span i {
+    padding: 10px;
+}
+
+.sidebar-nav .payment span:hover,
+.sidebar-nav .pages span:hover {
+    background-color: #F9FAFB;
+    cursor: pointer;
+}
+
+.sidebar-nav .pages span:hover,
+.sidebar-nav .payment span {
+    transition: 0.3s ease;
+}
+
+.sidebar-nav .payment span:hover {
+    transform: translateY(-4px);
+}
+
+.sidebar-nav .payment span .fa-solid {
+    width: 40px;
+    border-radius: 5px;
+}
+
+.sidebar-nav .payment span .fa-paper-plane {
+    background-color: #DBE8FC;
+    color: blue;
+}
+
+.sidebar-nav .payment span .fa-plus {
+    background-color: #D4F3E1;
+    color: green;
+}
+
+.sidebar-nav .payment span .fa-receipt {
+    background-color: #EFE0FC;
+    color: blueviolet;
+}
+
+.sidebar-nav .payment span .fa-chart-line {
+    background-color: #FBE4D4;
+    color: brown;
+}
+.grid-card {
+    min-height: 100px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    grid-template-areas:
+        "current-balance current-balance current-balance current-balance income income income income expenses expenses expenses expenses"
+        "current-balance current-balance current-balance current-balance income income income income expenses expenses expenses expenses"
+
+        "modern-activities modern-activities modern-activities modern-activities recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "modern-activities modern-activities modern-activities modern-activities recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "modern-activities modern-activities modern-activities modern-activities recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "modern-activities modern-activities modern-activities modern-activities recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+
+        "monthly-invoices monthly-invoices monthly-invoices monthly-invoices recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "monthly-invoices monthly-invoices monthly-invoices monthly-invoices recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "monthly-invoices monthly-invoices monthly-invoices monthly-invoices recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+        "monthly-invoices monthly-invoices monthly-invoices monthly-invoices recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+
+        "budget-overview budget-overview budget-overview budget-overview income-vs-expenses income-vs-expenses income-vs-expenses income-vs-expenses pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview income-vs-expenses income-vs-expenses income-vs-expenses income-vs-expenses pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview income-vs-expenses income-vs-expenses income-vs-expenses income-vs-expenses pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview income-vs-expenses income-vs-expenses income-vs-expenses income-vs-expenses pyment-methods pyment-methods pyment-methods pyment-methods"
+
+        "budget-overview budget-overview budget-overview budget-overview account-summary account-summary account-summary account-summary pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview account-summary account-summary account-summary account-summary pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview account-summary account-summary account-summary account-summary pyment-methods pyment-methods pyment-methods pyment-methods"
+        "budget-overview budget-overview budget-overview budget-overview account-summary account-summary account-summary account-summary pyment-methods pyment-methods pyment-methods pyment-methods"
+}
+
+.current-balance {
+    grid-area: current-balance;
+}
+
+.income {
+    grid-area: income;
+}
+
+.expenses {
+    grid-area: expenses;
+}
+
+.modern-activities {
+    grid-area: modern-activities;
+}
+
+.recent-transactions {
+    grid-area: recent-transactions;
+}
+
+.monthly-invoices {
+    grid-area: monthly-invoices;
+}
+
+.pyment-methods {
+    grid-area: pyment-methods;
+}
+
+.income-vs-expenses {
+    grid-area: income-vs-expenses;
+}
+
+.account-summary {
+    grid-area: account-summary;
+}
+
+.budget-overview {
+    grid-area: budget-overview;
+}
+
+.main-content .grid-container span {
+    display: block;
+}
+
+.main-content .grid-container .balance,
+.main-content .grid-container .icon {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-content .grid-container .money {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.main-content .grid-container .balance {
+    color: oklch(0.551 0.027 264.364);
+}
+
+.main-content .grid-container .icon-gr {
+    color: oklch(0.627 0.194 149.214);
+}
+
+.main-content .grid-container .icon-re {
+    color: oklch(0.577 0.245 27.325);
+}
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.main-content .grid-container .grid-card {
+    background-color: white;
+    border: 1px solid #E1E2E2;
+    border-radius: 10px;
+    padding: 25px;
+    
+}
+.main-content .grid-container .modern-activities .account {
+    background-color: #EFF6FF;
+    border-left: 5px solid #2B7FFF;
+    border-radius: 10px;
+}
+.main-content .grid-container .modern-activities .card h3,
+.main-content .grid-container .modern-activities .account h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.main-content .grid-container .modern-activities .account .icon,
+.main-content .grid-container .modern-activities .card .icon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.main-content .grid-container .modern-activities .account .icon {
+    background-color: #DBEAFE;
+    color: #155DFC;
+}
+.main-content .grid-container .modern-activities .card .icon {
+    background-color: #DBFCE7;
+    color: #00A63E;
+}
+.main-content .grid-container .modern-activities .card {
+    background-color: #F0FDF4;
+    border-left: 5px solid #00C950;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.main-content .grid-container .modern-activities .account .clock,
+.main-content .grid-container .modern-activities .card .clock {
+    padding-top: 10px;
+    font-size: 12px;
+}
+.main-content .grid-container .modern-activities .account ,
+.main-content .grid-container .modern-activities .card p {
+    font-size: 12px;
+    font-weight: 600;
+    color: oklch(0.446 0.03 256.802);
+}
+.main-content .grid-container .modern-activities .caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px; 
+}
+
+.main-content .grid-container .modern-activities .caption .content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1; 
+}
+.main-content .grid-container .modern-activities .account .caption .card-blu,
+.main-content .grid-container .modern-activities .card .caption .card-grn {
+    font-size: 12px;
+    font-weight: 500;
+}
+.main-content .grid-container .modern-activities .account .caption .card-blu {
+    color: oklch(0.546 0.245 262.881);
+}
+.main-content .grid-container .modern-activities .card .caption .card-grn {
+    color: oklch(0.627 0.194 149.214);
+}
+.main-content .grid-container .modern-activities .account,
+.main-content .grid-container .modern-activities .card {
+    padding: 20px;
+    margin-top: 10px;
+}
+.main-content .grid-container .modern-activities .other {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2B7FFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 2px solid #E1E2E2;
+}
+.main-content .grid-container .modern-activities .other:hover {
+    color: oklch(0.488 0.243 264.376);
+    font-weight: 700;
+}
+
+.main-content .grid-container .caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main-content .grid-container .caption span {
+    font-size: 14px;
+    font-weight: bold;
+    color: oklch(0.446 0.03 256.802) ;
+    cursor: pointer;
+}
+.main-content .grid-container .caption span:hover {
+    color: black;
+}
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-transactions table td,
+.recent-transactions table th {
+    border-bottom: 1px solid #E1E2E2;
+    padding: 15px;
+}
+.main-content .grid-container .recent-transactions table tr td img {
+    width: 40px;
+    border-radius: 50%;
+}
+.main-content .grid-container .recent-transactions table tr td .icon-grn,
+.main-content .grid-container .recent-transactions table tr .icon-category,
+.main-content .grid-container .recent-transactions table tr .icon-yell  {
+    width: 50px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.main-content .grid-container .recent-transactions table tr td .icon-grn,
+.main-content .grid-container .recent-transactions table tr td .icon-book {
+    background-color: #DBFCE7;
+    color: #016630;
+}
+.main-content .grid-container .recent-transactions table tr td .work {
+    color: oklch(0.551 0.027 264.364);
+    font-size: 12px;
+    font-weight: 600;
+}
+.main-content .grid-container .recent-transactions table tr td .flex {
+    display: flex;
+}
+.main-content .grid-container .recent-transactions table tr td .flex .title {
+    padding-right: 10px;
+}
+.main-content .grid-container .recent-transactions table tr .amount,
+.main-content .grid-container .monthly-invoices .cards .invoice-card .time-grn{
+    color: oklch(0.627 0.194 149.214);
+    font-size: 14px;
+    font-weight: 600;
+}
+.main-content .grid-container .recent-transactions table tr .date {
+    color: oklch(0.446 0.03 256.802);
+    font-size: 14px;
+    font-weight: 600;
+}
+.main-content .grid-container .recent-transactions table thead tr th {
+    color: oklch(0.373 0.034 259.733);
+    font-size: 14px;
+    text-align: right;
+    font-weight: 600;
+}
+.main-content .grid-container .recent-transactions table .name {
+    font-size: 14px;
+    font-weight: 600;
+}
+.main-content .grid-container .recent-transactions table tr .icon-brw {
+    color: oklch(0.47 0.157 37.304);
+    background-color: #FFEDD4;
+}
+.main-content .grid-container .recent-transactions table tr .flex .icon-transaction {
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.main-content .grid-container .recent-transactions table tr .flex .icon-unte {
+    color: #F54900;
+    background-color: #FFEDD4;
+}
+.main-content .grid-container .recent-transactions table tr .amount-blk {
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+}
+.main-content .grid-container .recent-transactions table tr .icon-shopp,
+.main-content .grid-container .recent-transactions table tr .icon-film,
+.main-content .grid-container .recent-transactions table tr .icon-tv ,
+.main-content .grid-container .monthly-invoices .cards .invoice-card .icon-wifi {
+    background-color: #DBEAFE;
+    color: #155DFC;
+}
+.main-content .grid-container .recent-transactions table tr .icon-blu {
+    background-color: #DBEAFE;
+    color: #193CB8;
+}
+.main-content .grid-container .recent-transactions table tr .icon-bluev {
+    background-color: #F3E8FF;
+    color: #6E11B0;
+    width: 80px;
+}
+.main-content .grid-container .recent-transactions table tr .icon-re {
+    background-color: #FFE2E2;
+    color: #9F0712;
+    width: 80px;
+}
+.main-content .grid-container .recent-transactions table tr .icon-gas,
+.main-content .grid-container .monthly-invoices .cards .invoice-card .icon-tv {
+    background-color: #FFE2E2;
+    color: #E7000B;
+}
+.main-content .grid-container .recent-transactions table tr .icon-yell {
+    background-color: #FEF9C2;
+    color: oklch(0.476 0.114 61.907);
+}
+.main-content .grid-container .recent-transactions table tr .icon-dumbbell {
+    background-color: #CEFAFE;
+    color: oklch(0.45 0.085 224.283);
+}
+.main-content .grid-container .recent-transactions table tr .icon-heart {
+    background-color: #CEFAFE;
+    color: #0092B8;
+}
+.main-content .grid-container .recent-transactions table tr .icon-cap,
+.main-content .grid-container .monthly-invoices .cards .invoice-card .icon-phone {
+    background-color: #D0FAE5;
+    color: #009966;
+}
+.main-content .grid-container .monthly-invoices .titl .span-1 { 
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.main-content .grid-container .monthly-invoices .titl .span-2 { 
+    font-size: 14px;
+    font-weight: 600;
+    color: oklch(0.551 0.027 264.364);
+    text-align: center;
+}
+.main-content .grid-container .monthly-invoices .cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card {
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .invoice-icon ,
+.main-content .grid-container .account-summary .account-card .icon {
+    width: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .work ,
+.main-content .grid-container .monthly-invoices .cards .invoice-card .time-gry{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 12px;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .moneyy {
+    font-weight: 600;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .icon-bolt {
+    background-color:#FEF9C2 ;
+    color: #D08700;
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .time-re {
+    color: oklch(0.637 0.237 25.331);
+}
+.main-content .grid-container .monthly-invoices .cards .invoice-card .time {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.main-content .grid-container .budget-overview .budget-card {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.main-content .grid-container .budget-overview .hover:hover {
+    background-color: #F5F6F8;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+}
+.main-content .grid-container .budget-overview .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-content .grid-container .budget-overview .amount .percent {
+    padding: 4px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.main-content .grid-container .budget-overview .amount .percent-1,
+.main-content .grid-container .budget-overview .amount .percent-4 {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+.main-content .grid-container .budget-overview .amount .percent-2 {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+.main-content .grid-container .budget-overview .amount .percent-3 {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.main-content .grid-container .budget-overview .info {
+    display: flex;
+}
+.main-content .grid-container .budget-overview .info .capt {
+    padding-right: 10px;
+}
+.main-content .grid-container .budget-overview .info h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main-content .grid-container .budget-overview .info p{
+    font-size: 12px;
+    color: #6B7280;
+    font-weight: 600;
+}
+
+.main-content .grid-container .budget-overview .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .grid-container .budget-overview .icon-film {
+    background-color: #FFE7CC;
+    color: #F97316;
+}
+.main-content .grid-container .budget-overview .icon-dollar {
+    background-color: #FEE2E2;
+    color: #E7000B;
+}
+.main-content .grid-container .budget-overview .icon-heart {
+    background-color: #FCE7F3;
+    color: #E60076;
+}
+.main-content .grid-container .budget-overview .icon-shopping {
+    background-color: #DCFCE7;
+    color: #00A63E;
+}
+.main-content .grid-container .budget-overview .progress{
+    height: 10px;
+    background-color: #E5E7EB;
+    border-radius: 20px;
+    overflow: hidden;
+} 
+.main-content .grid-container .budget-overview .progress span{
+    display: block;
+    height: 100%;
+    border-radius: 20px;
+}
+.main-content .grid-container .budget-blu .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.main-content .grid-container .budget-blu .percent-0,
+.main-content .grid-container .budget-blu .flex p {
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: flex-end;
+    padding-top: 5px;
+}
+.main-content .grid-container .budget-overview .card-top .capt .span-blu {
+    color: oklch(0.379 0.146 265.522);
+    font-size: 24px;
+    font-weight: bold;
+}
+.main-content .grid-container .budget-overview .amount .span-grn {
+    color: oklch(0.627 0.194 149.214);
+    font-size: 18px;
+}
+.main-content .grid-container .budget-overview .progress .span-pross-0 {
+    background-color: #546BFF;
+    width: 82%;
+}
+.main-content .grid-container .budget-overview .progress .span-pross-1 {
+    background-color: #F97316;
+    width: 50%;
+}
+.main-content .grid-container .budget-overview .progress .span-pross-2 {
+    background-color: #FB2C36;
+    width: 100%;
+}
+.main-content .grid-container .budget-overview .progress .span-pross-3 {
+    background-color: #F6339A;
+    width: 80%;
+}
+.main-content .grid-container .budget-overview .progress .span-pross-4 {
+    background-color: #00C950;
+    width: 86%;
+}
+.main-content .grid-container .budget-overview .budget-blu {
+    background-color: #EEF4FF;
+}
+.main-content .grid-container .budget-overview .budget-blu h3 {
+    color: #155DFC;
+    font-size: 14px;
+    font-weight: 600;
+}
+.main-content .grid-container .budget-blu .amount .amoun-span {
+    font-size: 14px;
+    font-weight:600;
+    color: oklch(0.551 0.027 264.364);
+}
+
+.main-content .grid-container .income-vs-expenses .chart {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .legend .item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .color.income,
+.main-content .grid-container .income-vs-expenses .chart .bar.income {
+    background:#10B981;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .color.expenses,
+.main-content .grid-container .income-vs-expenses .chart .bar.expense {
+    background:#EF4444;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .bars {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+}
+
+.main-content .grid-container .income-vs-expenses .chart .week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-content .grid-container .income-vs-expenses .chart .columns {
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.main-content .grid-container .income-vs-expenses .chart  .bar {
+    width: 17px;
+    border-radius: 3px 3px 0 0;
+}
+.main-content .grid-container .income-vs-expenses .chart .week span,
+.main-content .grid-container .income-vs-expenses .chart .text {
+    font-size: 12px;
+    font-weight: 600;
+    color:rgb(100, 116, 139);
+}
+
+.main-content .grid-container .account-summary .account-list {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-top:20px;
+}
+
+.main-content .grid-container .account-summary .account-list .account-card{
+    background:#F9FAFB;
+    border:1px solid #E5E7EB;
+    border-radius:16px;
+    padding:18px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.main-content .grid-container .account-summary .account-list .bank{
+    background:#DBEAFE;
+    color:#2563EB;
+}
+
+.main-content .grid-container .account-summary .account-list .saving{
+    background:#DCFCE7;
+    color:#16A34A;
+}
+
+.main-content .grid-container .account-summary .account-list .credit{
+    background:#F3E8FF;
+    color:#9333EA;
+}
+
+.main-content .grid-container .account-summary .account-list .account-card .info{
+    flex:1;
+    margin-right:18px;
+}
+
+.main-content .grid-container .account-summary .account-list .account-card .info h3 {
+    font-weight:600;
+    margin-bottom:6px;
+    color:#0F172A;
+}
+
+.main-content .grid-container .account-summary .account-list .account-card .info p{
+    font-size: 12px;
+    color:oklch(0.551 0.027 264.364);
+}
+
+.main-content .grid-container .account-summary .account-list .amount{
+    font-weight:700;
+    color:#0F172A;
+}
+
+.main-content .grid-container .account-summary .amount.danger{
+    color:#EF4444;
+}
+
+
+.main-content .grid-container .pyment-methods .payment-card{
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.main-content .grid-container .pyment-methods .card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .8s;
+}
+
+.main-content .grid-container .pyment-methods .payment-card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+
+.main-content .grid-container .pyment-methods .card-front,
+.main-content .grid-container .pyment-methods .card-back{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.main-content .grid-container .pyment-methods .card-front{
+    padding: 30px;
+    color: #fff;
+}
+
+.main-content .grid-container .pyment-methods .card-front.visa{
+    background:#3026A2;
+}
+
+.main-content .grid-container .pyment-methods .card-front.master{
+    background:#CA0641;
+}
+
+.main-content .grid-container .pyment-methods .card-front.paypal{
+    background:#2345B8;
+}
+
+.main-content .grid-container .pyment-methods .badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:10px;
+    font-weight:600;
+}
+
+.main-content .grid-container .pyment-methods .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.main-content .grid-container .pyment-methods .top .icon{
+    font-size:35px;
+}
+
+.main-content .grid-container .pyment-methods .chip{
+    width:60px;
+    height:40px;
+    border-radius:10px;
+    background:rgba(255,255,255,.18);
+    position:relative;
+}
+
+.main-content .grid-container .pyment-methods .chip::after{
+    content:"";
+    position:absolute;
+    width:28px;
+    height:20px;
+    border-radius:5px;
+    background:rgba(255,255,255,.35);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+
+.main-content .grid-container .pyment-methods .number{
+    margin:20px 0;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.main-content .grid-container .pyment-methods .bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.main-content .grid-container .pyment-methods .bottom span{
+    display:block;
+    font-size:14px;
+}
+
+.main-content .grid-container .pyment-methods .date{
+    font-size:13px;
+    font-weight:700;
+}
+
+.main-content .grid-container .pyment-methods .date-grn{
+    color:#49E36A;
+}
+
+.main-content .grid-container .pyment-methods .card-back{
+    background:#1F2937;
+    color:#fff;
+    transform:rotateY(180deg);
+    padding:25px;
+}
+
+.main-content .grid-container .pyment-methods .black-strip{
+    width:100%;
+    height:45px;
+   background: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 40%,
+    #272727 100%
+);
+    border-radius:4px;
+    margin-bottom:22px;
+}
+
+.main-content .grid-container .pyment-methods .signature-text{
+    font-size:13px;
+    color:#D1D5DB;
+    margin-bottom:8px;
+}
+
+.main-content .grid-container .pyment-methods .signature-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:10px;
+    border-radius:6px;
+}
+
+.main-content .grid-container .pyment-methods .signature-box .line{
+    width:80%;
+    height:10px;
+    background: linear-gradient(
+        90deg,
+        #eef1f5 0%,
+        #c7ccd4 50%,
+        #eef1f5 100%
+    );
+}
+
+.main-content .grid-container .pyment-methods .signature-box span{
+    color:#000;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.main-content .grid-container .pyment-methods .cvv{
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-content .grid-container .pyment-methods .cvv span{
+    display:block;
+    color:#D1D5DB;
+    font-size:13px;
+}
+
+.main-content .grid-container .pyment-methods .cvv-box{
+    width:70px;
+    height:35px;
+    background:#fff;
+    color:#000;
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    font-weight:bold;
+}
